@@ -13,35 +13,57 @@ circle {
   justify-content: center;
   height: 15rem;
   background-repeat: no-repeat;
-  background-size: 50%;
   background-position: center;
 }
 
-.center-card-img-1 {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://image.shutterstock.com/image-vector/money-bag-flat-illustration-dollars-260nw-1927192892.jpg);
-}
-.center-card-img-2 {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/3/68046033_1_200x200.jpg);
-}
-.center-card-img-3 {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/1/68046081_1_200x200.jpg);
-}
-.center-card-img-4 {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/1/68046031_1_200x200.jpg);
-}
-.center-card-img-5 {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/2/68046082_1_200x200.jpg);
-}
-.center-card-img-6 {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/9/68046049_1_200x200.jpg);
-}
-
-::ng-deep .pepperi-theme{ 
-    .mat-progress-spinner {
-        transform: scale(1.7);
-        circle{ 
-            stroke: purple;
-        }
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-1 {
+    transform: scale(1.7);
+    circle {
+      stroke: rgb(14, 126, 255);
     }
+  }
+}
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-2 {
+    transform: scale(1.7);
+    circle {
+      stroke: rgb(245, 65, 245);
+    }
+  }
+}
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-3 {
+    transform: scale(1.7);
+    circle {
+      stroke: rgb(255, 54, 4);
+    }
+  }
 }
 
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-4 {
+    transform: scale(1.7);
+    circle {
+      stroke: cyan;
+    }
+  }
+}
+
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-5 {
+    transform: scale(1.7);
+    circle {
+      stroke: rgb(233, 17, 233);
+    }
+  }
+}
+
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-6 {
+    transform: scale(1.7);
+    circle {
+      stroke: rgb(50, 230, 34);
+    }
+  }
+}

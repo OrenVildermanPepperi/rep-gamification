@@ -1,59 +1,92 @@
 <pep-page-layout>
-    <ng-container pep-top-area>
-        <pep-top-bar [title]="('Title_Addon' | translate)">
-            <div header-start-content>
-            </div>
-            <div header-end-content>
-            </div>
-        </pep-top-bar>
-    </ng-container>
+  <ng-container pep-top-area>
+    <pep-top-bar [title]="'Title_Addon' | translate">
+      <div header-start-content></div>
+      <div header-end-content></div>
+    </pep-top-bar>
+  </ng-container>
 
-    <ng-container pep-main-area>
-        <div class="addon-grid">
-            <mat-card class="center-card center-card-img-1">
-                <mat-card-content>
-                    <h2 class="example-h2"></h2>
-                    <mat-progress-spinner class="pep-spinner" mode="determinate" value='75'></mat-progress-spinner>
-                </mat-card-content>
-            </mat-card>
-            
-            <mat-card class="center-card center-card-img-2">
-                <mat-card-content>
-                    <h2 class="example-h2"></h2>
-                    <mat-progress-spinner class="pep-spinner" mode="determinate" value='50'></mat-progress-spinner>
-                </mat-card-content>
-            </mat-card>
+  <ng-container pep-main-area>
+    <div class="addon-grid">
+      <mat-card
+        class="center-card center-card-img-1"
+        [style.background-image]="center_card_img_1"
+      >
+        <mat-card-content>
+          <mat-progress-spinner
+            class="pep-spinner spinner-color-1"
+            mode="determinate"
+            [value]="progressSpinner_1"
+          ></mat-progress-spinner>
+        </mat-card-content>
+      </mat-card>
 
-            <mat-card class="center-card center-card-img-3">
-                <mat-card-content>
-                    <h2 class="example-h2"></h2>
-                    <mat-progress-spinner class="pep-spinner" mode="determinate" value='15'></mat-progress-spinner>
-                </mat-card-content>
-            </mat-card>
+      <mat-card
+        class="center-card center-card-img-2"
+        [style.background-image]="center_card_img_2"
+      >
+        <mat-card-content>
+          <mat-progress-spinner
+            class="pep-spinner spinner-color-2"
+            mode="determinate"
+            [value]="progressSpinner_2"
+          ></mat-progress-spinner>
+        </mat-card-content>
+      </mat-card>
 
-            <mat-card class="center-card center-card-img-4">
-                <mat-card-content>
-                    <h2 class="example-h2"></h2>
-                    <mat-progress-spinner class="pep-spinner" mode="determinate" value='70'></mat-progress-spinner>
-                </mat-card-content>
-            </mat-card>
+      <mat-card
+        class="center-card center-card-img-3"
+        [style.background-image]="center_card_img_3"
+      >
+        <mat-card-content>
+          <mat-progress-spinner
+            class="pep-spinner spinner-color-3"
+            mode="determinate"
+            [value]="progressSpinner_3"
+          ></mat-progress-spinner>
+        </mat-card-content>
+      </mat-card>
 
-            <mat-card class="center-card center-card-img-5">
-                <mat-card-content>
-                    <h2 class="example-h2"></h2>
-                    <mat-progress-spinner class="pep-spinner" mode="determinate" value='30'></mat-progress-spinner>
-                </mat-card-content>
-            </mat-card>
+      <mat-card
+        class="center-card center-card-img-4"
+        [style.background-image]="center_card_img_4"
+      >
+        <mat-card-content>
+          <mat-progress-spinner
+            class="pep-spinner spinner-color-4"
+            mode="determinate"
+            [value]="progressSpinner_4"
+          ></mat-progress-spinner>
+        </mat-card-content>
+      </mat-card>
 
-            <mat-card class="center-card center-card-img-6">
-                <mat-card-content>
-                    <h2 class="example-h2"></h2>
-                    <mat-progress-spinner class="pep-spinner" mode="determinate" value='90'></mat-progress-spinner>
-                </mat-card-content>
-            </mat-card>
-        </div>
+      <mat-card
+        class="center-card center-card-img-5"
+        [style.background-image]="center_card_img_5"
+      >
+        <mat-card-content>
+          <mat-progress-spinner
+            class="pep-spinner spinner-color-5"
+            mode="determinate"
+            [value]="progressSpinner_5"
+          ></mat-progress-spinner>
+        </mat-card-content>
+      </mat-card>
 
-    </ng-container>
+      <mat-card
+        class="center-card center-card-img-6"
+        [style.background-image]="center_card_img_6"
+      >
+        <mat-card-content>
+          <mat-progress-spinner
+            class="pep-spinner spinner-color-6"
+            mode="determinate"
+            [value]="progressSpinner_6"
+          ></mat-progress-spinner>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </ng-container>
 </pep-page-layout>
 
 <pep-size-detector></pep-size-detector>

@@ -15,35 +15,30 @@ circle {
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center;
-  opacity: 0.6;
 }
 
 .center-card-img-1 {
-  background-image: url(https://image.shutterstock.com/image-vector/money-bag-flat-illustration-dollars-260nw-1927192892.jpg);
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://image.shutterstock.com/image-vector/money-bag-flat-illustration-dollars-260nw-1927192892.jpg);
 }
 .center-card-img-2 {
-  background-image: url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/3/68046033_1_200x200.jpg);
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/3/68046033_1_200x200.jpg);
 }
 .center-card-img-3 {
-  background-image: url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/1/68046081_1_200x200.jpg);
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/1/68046081_1_200x200.jpg);
 }
 .center-card-img-4 {
-  background-image: url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/1/68046031_1_200x200.jpg);
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/1/68046031_1_200x200.jpg);
 }
 .center-card-img-5 {
-  background-image: url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/2/68046082_1_200x200.jpg);
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/2/68046082_1_200x200.jpg);
 }
 .center-card-img-6 {
-  background-image: url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/9/68046049_1_200x200.jpg);
-}
-
-.pep-spinner svg {
-  opacity: 1;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/9/68046049_1_200x200.jpg);
 }
 
 ::ng-deep .pepperi-theme{ 
     .mat-progress-spinner {
-        transform: scale(1.9);
+        transform: scale(1.7);
         circle{ 
             stroke: purple;
         }

@@ -14,6 +14,8 @@ import { TranslateLoader, TranslateModule, TranslateService, TranslateStore } fr
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
+import { MatCardModule } from '@angular/material/card';
+
 import { AddonService } from './addon.service';
 import { AddonComponent } from './index';
 
@@ -48,7 +50,8 @@ export const routes: Routes = [
         }),
         RouterModule.forChild(routes),
         MatProgressSpinnerModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatCardModule,
     ],
     exports:[AddonComponent],
     providers: [

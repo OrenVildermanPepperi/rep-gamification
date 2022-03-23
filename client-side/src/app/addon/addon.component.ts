@@ -15,7 +15,7 @@ export class AddonComponent implements OnInit {
     @Output() hostEvents: EventEmitter<any> = new EventEmitter<any>();
     
     screenSize: PepScreenSizeType;
-
+      
     constructor(
         public addonService: AddonService,
         public layoutService: PepLayoutService,

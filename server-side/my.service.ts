@@ -188,7 +188,7 @@ class MyService {
     }
     if (quest.Type == "Quantity" && quest.Object == "Order") {
       var orders = await this.getTransactionsByAgent(agentID);
-      progress = orders.length();
+      progress = orders.length;
       for (var level of levels) {
         level.status = progress >= level.target;
       }

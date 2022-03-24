@@ -49,7 +49,7 @@ export class AddonComponent implements OnInit {
 
   async ngOnInit() {
     const oren = await this.addonService.get(
-      "/addons/api/040e9638-d148-4e8a-a872-29afd07f3733/api/foo"
+      "/addons/api/040e9638-d148-4e8a-a872-29afd07f3733/api/quests"
     );
     console.log(oren);
      this.progressSpinner_1 = "20";
@@ -66,7 +66,6 @@ export class AddonComponent implements OnInit {
      this.center_card_img_5 = "linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/2/68046082_1_200x200.jpg)";
      this.center_card_img_6 = "linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),url(https://cdn.pepperi.com/WrntyImages/30014373/PortfolioItems/9/68046049_1_200x200.jpg)";
 
-      
     debugger;
   }
 

@@ -16,6 +16,39 @@ circle {
   background-position: center;
 }
 
+.pep-progress-text {
+  position: absolute;
+  margin-top: -7rem;
+  padding-left: 1rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: sans;
+  color: yellow;
+  font-weight: bolder;
+}
+
+.material-icons {
+  position: absolute;
+  margin-top: 12rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: yellow;
+  font-weight: bolder;
+}
+.pep-icon-1 {
+  margin-left: -8rem;
+}
+
+.pep-icon-2 {
+  margin-left: -4rem;
+}
+
+.pep-icon-4 {
+  margin-left: 4rem;
+}
+
+.pep-icon-5 {
+  margin-left: 8rem;
+}
+
 ::ng-deep .pepperi-theme {
   .mat-progress-spinner.spinner-color-1 {
     transform: scale(1.7);

@@ -16,6 +16,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { MatCardModule } from '@angular/material/card';
 
+import {MatIconModule} from '@angular/material/icon';
+
 import { AddonService } from './addon.service';
 import { AddonComponent } from './index';
 
@@ -52,6 +54,7 @@ export const routes: Routes = [
         MatProgressSpinnerModule,
         MatProgressBarModule,
         MatCardModule,
+        MatIconModule
     ],
     exports:[AddonComponent],
     providers: [

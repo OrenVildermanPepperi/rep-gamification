@@ -1,20 +1,26 @@
-import MyService from './my.service'
-import { Client, Request } from '@pepperi-addons/debug-server'
+import MyService from "./my.service";
+import { Client, Request } from "@pepperi-addons/debug-server";
 
-export async function getQuests(client: Client, request: Request) {
-    const service = new MyService(client)
-    const res = await service.calcQuestsProgress()
-    return res
-};
+/**
+ * GET function
+ * @param client
+ * @param request
+ * @returns Array of Quests
+ */
+export async function quests(client: Client, request: Request) {
+  const service = new MyService(client);
+  const res = await service.calcQuestsProgress();
+  return res;
+}
 
-export async function createQuest(client: Client, request: Request) {
-    const service = new MyService(client)
-    const res = await service.createQuest(request.body)
-    return res
-};
-
-
-
-
-
-
+/**
+ * POST function
+ * @param client
+ * @param request
+ * @returns the quest object from ADAL
+ */
+export async function quest(client: Client, request: Request) {
+  const service = new MyService(client);
+  const res = await service.createQuest(request.body);
+  return res;
+}

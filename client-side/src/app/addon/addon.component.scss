@@ -14,23 +14,24 @@ circle {
   height: 15rem;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 }
-
+.pep-ab {
+  width: 100px;
+  height: 100px;
+}
 .pep-progress-text {
   position: absolute;
-  margin-top: -7rem;
+  margin-top: -0rem;
   padding-left: 1rem;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-family: sans;
-  color: yellow;
+  color: #5200a6;
   font-weight: bolder;
 }
 
 .material-icons {
   position: absolute;
   margin-top: 12rem;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  color: yellow;
   font-weight: bolder;
 }
 .pep-icon-1 {
@@ -52,24 +53,57 @@ circle {
 ::ng-deep .pepperi-theme {
   .mat-progress-spinner.spinner-color-1 {
     transform: scale(1.7);
+    position: absolute;
     circle {
-      stroke: rgb(14, 126, 255);
+      stroke: #ff00ba;
     }
   }
 }
+
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-10 {
+    transform: scale(1.7);
+    position: absolute;
+    circle {
+      stroke: #817e7e;
+    }
+  }
+}
+
 ::ng-deep .pepperi-theme {
   .mat-progress-spinner.spinner-color-2 {
     transform: scale(1.7);
     circle {
-      stroke: rgb(245, 65, 245);
+      stroke: #ff00ba;
     }
   }
 }
+
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-20 {
+    transform: scale(1.7);
+    position: absolute;
+    circle {
+      stroke: #817e7e;
+    }
+  }
+}
+
 ::ng-deep .pepperi-theme {
   .mat-progress-spinner.spinner-color-3 {
     transform: scale(1.7);
     circle {
-      stroke: rgb(255, 54, 4);
+      stroke: #ff00ba;
+    }
+  }
+}
+
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-30 {
+    transform: scale(1.7);
+    position: absolute;
+    circle {
+      stroke: #817e7e;
     }
   }
 }
@@ -78,7 +112,17 @@ circle {
   .mat-progress-spinner.spinner-color-4 {
     transform: scale(1.7);
     circle {
-      stroke: cyan;
+      stroke: #ff00ba;
+    }
+  }
+}
+
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-40 {
+    transform: scale(1.7);
+    position: absolute;
+    circle {
+      stroke: #817e7e;
     }
   }
 }
@@ -87,7 +131,17 @@ circle {
   .mat-progress-spinner.spinner-color-5 {
     transform: scale(1.7);
     circle {
-      stroke: rgb(233, 17, 233);
+      stroke: #ff00ba;
+    }
+  }
+}
+
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-50 {
+    transform: scale(1.7);
+    position: absolute;
+    circle {
+      stroke: #817e7e;
     }
   }
 }
@@ -96,7 +150,17 @@ circle {
   .mat-progress-spinner.spinner-color-6 {
     transform: scale(1.7);
     circle {
-      stroke: rgb(50, 230, 34);
+      stroke: #ff00ba;
+    }
+  }
+}
+
+::ng-deep .pepperi-theme {
+  .mat-progress-spinner.spinner-color-60 {
+    transform: scale(1.7);
+    position: absolute;
+    circle {
+      stroke: #817e7e;
     }
   }
 }

@@ -25,7 +25,16 @@ export async function install(client: Client, request: Request): Promise<any> {
 }
 
 export async function uninstall(client: Client, request: Request): Promise<any> {
-    return {success:true,resultObject:{}}
+    try{
+        const service = new MyService(client)
+        await service.papiClient.post(`/addons/data/schemes/Quests/purge`);
+        return { success: true, resultObject: {} }
+    }
+    catch(err){
+        console.log('Failed to uninstall quests addon', err)
+        return err;
+
+    }
 }
 
 export async function upgrade(client: Client, request: Request): Promise<any> {

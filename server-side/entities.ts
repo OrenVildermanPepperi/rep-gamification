@@ -7,6 +7,7 @@ export interface Quest {
   Object: string;
   Levels: Array<{ target; status }>;
   rewards: Array<number>;
-  ItemID?: string;
+  Image?: string,
+  ItemID?: string,
   Key?: string;
 }

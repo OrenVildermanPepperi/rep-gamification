@@ -19,6 +19,7 @@ circle {
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 0.5rem;
+  background-position-y: -1.5rem;
 }
 
 .pep-ab {
@@ -31,7 +32,7 @@ circle {
   margin-top: -0rem;
   padding-left: 1rem;
   font-family: sans;
-  color: #5200a6;
+  color: darkviolet;
   font-weight: bolder;
 }
 
@@ -40,7 +41,7 @@ circle {
   top: 5px;
   padding-left: 1rem;
   font-family: sans;
-  color: #5200a6;
+  color: darkviolet;
   font-weight: bolder;
   font-size: 100%;
   z-index: 99;
@@ -72,7 +73,7 @@ circle {
     transform: scale(1.7);
     position: absolute;
     circle {
-      stroke: #ff00ba;
+      stroke: fuchsia;
     }
   }
 }
@@ -82,7 +83,7 @@ circle {
     transform: scale(1.7);
     position: absolute;
     circle {
-      stroke: #ababab;
+      stroke: lightgray;
     }
   }
 }
@@ -91,7 +92,7 @@ circle {
   .mat-progress-spinner.spinner-color-2 {
     transform: scale(1.7);
     circle {
-      stroke: #ff00ba;
+      stroke: fuchsia;
     }
   }
 }
@@ -101,7 +102,7 @@ circle {
     transform: scale(1.7);
     position: absolute;
     circle {
-      stroke: #ababab;
+      stroke: lightgray;
     }
   }
 }
@@ -110,7 +111,7 @@ circle {
   .mat-progress-spinner.spinner-color-3 {
     transform: scale(1.7);
     circle {
-      stroke: #ff00ba;
+      stroke: fuchsia;
     }
   }
 }
@@ -120,7 +121,7 @@ circle {
     transform: scale(1.7);
     position: absolute;
     circle {
-      stroke: #ababab;
+      stroke: lightgray;
     }
   }
 }
@@ -129,7 +130,7 @@ circle {
   .mat-progress-spinner.spinner-color-4 {
     transform: scale(1.7);
     circle {
-      stroke: #ff00ba;
+      stroke: fuchsia;
     }
   }
 }
@@ -139,7 +140,7 @@ circle {
     transform: scale(1.7);
     position: absolute;
     circle {
-      stroke: #ababab;
+      stroke: lightgray;
     }
   }
 }
@@ -148,7 +149,7 @@ circle {
   .mat-progress-spinner.spinner-color-5 {
     transform: scale(1.7);
     circle {
-      stroke: #ff00ba;
+      stroke: fuchsia;
     }
   }
 }
@@ -158,7 +159,7 @@ circle {
     transform: scale(1.7);
     position: absolute;
     circle {
-      stroke: #ababab;
+      stroke: lightgray;
     }
   }
 }
@@ -167,7 +168,7 @@ circle {
   .mat-progress-spinner.spinner-color-6 {
     transform: scale(1.7);
     circle {
-      stroke: #ff00ba;
+      stroke: fuchsia;
     }
   }
 }
@@ -177,7 +178,7 @@ circle {
     transform: scale(1.7);
     position: absolute;
     circle {
-      stroke: #ababab;
+      stroke: lightgray;
     }
   }
 }

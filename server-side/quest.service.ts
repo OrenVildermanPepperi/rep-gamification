@@ -37,6 +37,30 @@ class QuestService {
       .upsert(quest);
   }
 
+  /**
+   * Can be use with get to get all quests and with body to update any quest
+   * @param questArr
+   * @returns all the quests in array
+   */
+  async updateQuest(questArr: Quest[]) {
+    let questsResponse = await this.papiClient.addons.data
+      .uuid(this.client.AddonUUID)
+      .table("Quests")
+      .find();
+
+    if (questArr) {
+      await this.papiClient.post(
+        `/addons/data/batch/${this.client.AddonUUID}/Quests`,
+        { Objects: questArr }
+      );
+      questsResponse = await this.papiClient.addons.data
+        .uuid(this.client.AddonUUID)
+        .table("Quests")
+        .find();
+    }
+    return questsResponse;
+  }
+
   async calcQuestsProgress() {
     const currUserId = (<any>jwtDecode(this.client.OAuthAccessToken))[
       "pepperi.id"

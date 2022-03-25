@@ -9,13 +9,13 @@ The error Message is importent! it will be written in the audit log and help the
 */
 
 import { Client, Request } from '@pepperi-addons/debug-server'
-import MyService from './my.service';
+import QuestService from './quest.service';
 
 export async function install(client: Client, request: Request): Promise<any> {
     // For page block template uncomment this.
     // const res = await createPageBlockRelation(client);
     // return res;
-    const service = new MyService(client);
+    const service = new QuestService(client);
     await service.papiClient.addons.data.schemes.post({
         Name: "Quests",
         Type: "data"
@@ -26,7 +26,7 @@ export async function install(client: Client, request: Request): Promise<any> {
 
 export async function uninstall(client: Client, request: Request): Promise<any> {
     try{
-        const service = new MyService(client)
+        const service = new QuestService(client)
         await service.papiClient.post(`/addons/data/schemes/Quests/purge`);
         return { success: true, resultObject: {} }
     }

@@ -16,10 +16,12 @@ circle {
   background-position: center;
   position: relative;
 }
+
 .pep-ab {
   width: 100px;
   height: 100px;
 }
+
 .pep-progress-text {
   position: absolute;
   margin-top: -0rem;
@@ -27,6 +29,17 @@ circle {
   font-family: sans;
   color: #5200a6;
   font-weight: bolder;
+}
+
+.pep-header-text {
+  position: absolute;
+  margin-top: -12rem !important;
+  padding-left: 1rem;
+  font-family: sans;
+  color: #5200a6;
+  font-weight: bolder;
+  font-size: 100%;
+  z-index: 99;
 }
 
 .material-icons {

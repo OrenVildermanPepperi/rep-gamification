@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
-import { AddonService } from './addon.service';
-import { AddonComponent } from './addon.component';
+import { Injectable } from "@angular/core";
+import { AddonService } from "./addon.service";
+import { AddonComponent } from "./addon.component";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class QuestService {
-  addonService: AddonService
-  addonComponent: AddonComponent
+  addonService: AddonService;
+  addonComponent: AddonComponent;
 
   constructor(addonService: AddonService, addonComponent: AddonComponent) {
     this.addonService = addonService;
@@ -15,7 +15,6 @@ export class QuestService {
   }
 
   async updateQuests() {
-
     const questResponse: any = await this.addonService.get(
       "/addons/api/040e9638-d148-4e8a-a872-29afd07f3733/quest/quests"
     );
@@ -119,98 +118,98 @@ export class QuestService {
 
     this.addonComponent.star_icon_11 = questResponse[0].Levels[0].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_12 = questResponse[0].Levels[1].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_13 = questResponse[0].Levels[2].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_14 = questResponse[0].Levels[3].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_15 = questResponse[0].Levels[4].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
 
     this.addonComponent.star_icon_21 = questResponse[1].Levels[0].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_22 = questResponse[1].Levels[1].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_23 = questResponse[1].Levels[2].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_24 = questResponse[1].Levels[3].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_25 = questResponse[1].Levels[4].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
 
     this.addonComponent.star_icon_31 = questResponse[2].Levels[0].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_32 = questResponse[2].Levels[1].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_33 = questResponse[2].Levels[2].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_34 = questResponse[2].Levels[3].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_35 = questResponse[2].Levels[4].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
 
     this.addonComponent.star_icon_41 = questResponse[3].Levels[0].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_42 = questResponse[3].Levels[1].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_43 = questResponse[3].Levels[2].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_44 = questResponse[3].Levels[3].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_45 = questResponse[3].Levels[4].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
 
     this.addonComponent.star_icon_51 = questResponse[4].Levels[0].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_52 = questResponse[4].Levels[1].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_53 = questResponse[4].Levels[2].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_54 = questResponse[4].Levels[3].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_55 = questResponse[4].Levels[4].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
 
     this.addonComponent.star_icon_61 = questResponse[5].Levels[0].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_62 = questResponse[5].Levels[1].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_63 = questResponse[5].Levels[2].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_64 = questResponse[5].Levels[3].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
     this.addonComponent.star_icon_65 = questResponse[5].Levels[4].status
       ? "#5200a6"
-      : "#817e7e";
+      : "#ababab";
   }
 }

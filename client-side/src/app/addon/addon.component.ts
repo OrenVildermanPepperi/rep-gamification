@@ -90,7 +90,7 @@ export class AddonComponent implements OnInit {
   constructor(
     public addonService: AddonService,
     public layoutService: PepLayoutService,
-    public translate: TranslateService,
+    public translate: TranslateService
   ) {
     this.layoutService.onResize$.subscribe((size) => {
       this.screenSize = size;
@@ -101,13 +101,16 @@ export class AddonComponent implements OnInit {
     updateUI(this.addonService, this);
   }
 
-  openDialog() { }
+  openDialog() {}
 }
 
-const updateUI = (addonService: AddonService, addonComponent: AddonComponent) => {
-  const questService = new QuestService(addonService, addonComponent)
-  questService.updateQuests()
+const updateUI = (
+  addonService: AddonService,
+  addonComponent: AddonComponent
+) => {
+  const questService = new QuestService(addonService, addonComponent);
+  questService.updateQuests();
   setInterval(() => {
-    questService.updateQuests()
-  }, 3000)
-}
+    questService.updateQuests();
+  }, 3000);
+};

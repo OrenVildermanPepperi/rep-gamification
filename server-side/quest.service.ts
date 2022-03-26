@@ -17,6 +17,11 @@ class QuestService {
     });
   }
 
+  /**
+   * This function return only transaction_lines of non hidden transactions
+   * @param agentID
+   * @returns
+   */
   async getTransactionLinesByAgent(agentID) {
     return await this.papiClient.get(
       `/transaction_lines?where=Transaction.Agent.InternalID=${agentID} AND Transaction.Hidden=false`
@@ -31,7 +36,7 @@ class QuestService {
 
   createQuest(quest: Quest) {
     quest.Key = uuid();
-    this.papiClient.addons.data
+    return this.papiClient.addons.data
       .uuid(this.client.AddonUUID)
       .table("Quests")
       .upsert(quest);
@@ -43,22 +48,65 @@ class QuestService {
    * @returns all the quests in array
    */
   async updateQuest(questArr: Quest[]) {
-    let questsResponse = await this.papiClient.addons.data
-      .uuid(this.client.AddonUUID)
-      .table("Quests")
-      .find();
-
     if (questArr) {
       await this.papiClient.post(
         `/addons/data/batch/${this.client.AddonUUID}/Quests`,
         { Objects: questArr }
       );
-      questsResponse = await this.papiClient.addons.data
-        .uuid(this.client.AddonUUID)
-        .table("Quests")
-        .find();
     }
-    return questsResponse;
+    return await this.papiClient.addons.data
+      .uuid(this.client.AddonUUID)
+      .table("Quests")
+      .find();
+  }
+
+  /**
+   * uses a Quest key to hide quest in the schema
+   * @param questArr
+   * @returns the hidden quest object
+   */
+  async hideQuest(questUUID: string) {
+    return await this.papiClient.post(
+      `/addons/data/${this.client.AddonUUID}/Quests`,
+      {
+        Key: questUUID,
+        Hidden: true,
+      }
+    );
+  }
+
+  /**
+   * uses a Quest key to find and restore quest in the schema
+   * @param questUUID
+   * @returns the unhidden quest object or false
+   */
+  async restoreQuest(questUUID: string) {
+    const questToRestore = await this.papiClient.get(
+      `/addons/data/${this.client.AddonUUID}/Quests/${questUUID}`
+    );
+
+    if (questToRestore) {
+      questToRestore.Hidden = false;
+      return await this.papiClient.post(
+        `/addons/data/${this.client.AddonUUID}/Quests`,
+        questToRestore
+      );
+    } else {
+      {
+        return { RestoreResponse: `Quest with UUID: ${questUUID}, not found` };
+      }
+    }
+  }
+
+  /**
+   * Can be use with get to get all quests and with body to update any quest
+   * @returns all the quests in array
+   */
+  async getAllQuests() {
+    return await this.papiClient.addons.data
+      .uuid(this.client.AddonUUID)
+      .table("Quests")
+      .find({ include_deleted: true });
   }
 
   async calcQuestsProgress() {
@@ -74,105 +122,8 @@ class QuestService {
       const res = await this.calculate(q as Quest, currUserId);
       response.push(res);
     }
-    if (false) {
-      return [
-        {
-          Name: "",
-          Des: "",
-          Type: "Quanity",
-          Object: "Order",
-          Levels: [
-            { 100: true },
-            { 200: true },
-            { 300: 270 },
-            { 400: false },
-            { 500: false },
-          ],
-          rewards: [5, 10, 20, 40, 50],
-        },
-        {
-          Name: "",
-          Des: "",
-          Type: "Price",
-          Object: "Order",
-          Levels: [
-            { 100: true },
-            { 200: true },
-            { 300: 270 },
-            { 400: false },
-            { 500: false },
-          ],
-          rewards: [5, 10, 20, 40, 50],
-        },
-        {
-          Name: "",
-          Des: "",
-          Type: "Quanity",
-          Object: "ItemID",
-          Levels: [
-            { 100: true },
-            { 200: true },
-            { 300: 270 },
-            { 400: false },
-            { 500: false },
-          ],
-          rewards: [5, 10, 20, 40, 50],
-        },
-        {
-          Name: "",
-          Des: "",
-          Type: "Quanity",
-          Object: "ItemID",
-          Levels: [
-            { 100: true },
-            { 200: true },
-            { 300: 270 },
-            { 400: false },
-            { 500: false },
-          ],
-          rewards: [5, 10, 20, 40, 50],
-        },
-        {
-          Name: "",
-          Des: "",
-          Type: "Price",
-          Object: "ItemID",
-          Levels: [
-            { 100: true },
-            { 200: true },
-            { 300: 270 },
-            { 400: false },
-            { 500: false },
-          ],
-          rewards: [5, 10, 20, 40, 50],
-        },
-        {
-          Name: "",
-          Des: "",
-          Type: "Price",
-          Object: "ItemID",
-          Levels: [
-            { 100: true },
-            { 200: true },
-            { 300: 270 },
-            { 400: false },
-            { 500: false },
-          ],
-          rewards: [5, 10, 20, 40, 50],
-        },
-      ];
-    } else {
-      return response;
-    }
+    return response;
   }
-  // body {
-  // Quest: {
-  // Name: "",
-  // Des: "",
-  // Type: Quanity/Price,
-  // Object: Order/ItemID
-  // Levels: [100: true,200: true, 300: 270, 400: false, 500: false],
-  // rewards: [5,10,20,40,50]}
 
   async calculate(quest: Quest, agentID) {
     var levels = quest.Levels;
@@ -189,10 +140,6 @@ class QuestService {
       for (var level of levels) {
         level.status = progress >= level.target;
       }
-      // need to calculete the relevant stages of the quest
-      // need to set true in the array completed levels
-      // need to set false in the array for unfinished levels
-      // need to set current level to double
     }
     if (quest.Type == "Price" && quest.Object == "ItemID") {
       var transLines = await this.getTransactionLinesByAgent(agentID);
